@@ -1,16 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Update Stock</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.min.js"></script>
-</head>
-<body>
-<jsp:include page="headers.jsp"></jsp:include>
-
+<div>
 <h3>Update Stock</h3>
 <form onsubmit="register()">
 
@@ -39,17 +27,16 @@ function register(){
         
          if (msg.errorMessage!=null) {
             alert(msg.errorMessage);
+            window.location.href = "?pageName=updatestock.jsp";
            
         } else {
             
-            //alert(msg.message);
-            alert("Updated Stock successfully");
-            window.location.href = "adminaction.jsp";
+           alert("Updated Stock successfully");
+            window.location.href = "?pageName=adminaction.jsp";
             
         }
     });
 }
 
 </script>
-</body>
-</html>
+</div>

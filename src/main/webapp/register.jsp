@@ -1,22 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.min.js"></script>
-<style type="text/css">
-label {
-	width: 110px;
-	display: inline-block;
-	text-align: center;
-}
-</style>
-</head>
-<body style="text-align: center">
-	<jsp:include page="headers.jsp"></jsp:include>
-	<br />
+
+<div>
 	<form onsubmit="register()">
 		<h3>User Registration</h3>
 		<br /> <label>Name:</label> <input type="text" name="name" id="name"
@@ -36,7 +19,7 @@ label {
 			placeholder="Enter the mobile number" required /><br> <br /> <input
 			type="submit" value="Register" class="btn btn-success">
 		<button type="reset" class="btn btn-danger" value="clear">Clear</button>
-		<a href="index.jsp"><u>Home?</u></a>
+		<a href="?pageName=home.jsp"><u>Home?</u></a>
 		<br />
 
 	</form>
@@ -66,16 +49,15 @@ label {
 
 				if (msg.errorMessage != null) {
 					alert(msg.errorMessage);
-					window.location.href = "register.jsp";
+					window.location.href = "?pageName=register.jsp";
 
 				} else {
 
 					alert("Registered successfully");
-					window.location.href = "userlogin.jsp";
+					window.location.href = "?pageName=userlogin.jsp";
 
 				}
 			});
 		}
 	</script>
-</body>
-</html>
+</div>

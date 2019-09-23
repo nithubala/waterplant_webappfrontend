@@ -1,23 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Order Can</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.min.js"></script>
-</head>
-<body>
-<jsp:include page="headers.jsp"></jsp:include>
+<div>
 <form onsubmit="register()">
 <h2>Order Cans</h2>
-<label>Enter the Number of Cans to order:</label>
-<input type="text" name="ordercans" id="ordercans" required autofocus/>
+<label>Number of Cans to order:</label>
+<input type="text" name="ordercans" size=25  id="ordercans" placeholder="Enter the number of cans" required autofocus/>
  <input type="submit" value="Submit" class="btn btn-success">
         <button type="reset" class="btn btn-danger" value="clear">Clear</button><br/>
-        <a href="viewstock.jsp">Available Stock</a>
+        <a href="?pageName=viewstock.jsp"><u>Available Stock</u></a>
 
 </form>
 <script type="text/javascript">
@@ -41,17 +29,16 @@ $.get(url, function(response) {
     
      if (msg.errorMessage!=null) {
         alert(msg.errorMessage);
-        window.location.href = "ordercan.jsp";
+        window.location.href = "?pageName=ordercan.jsp";
        
     } else {
         
         alert("Ordered Cans successfully");
-        window.location.href = "useraction.jsp";
+        window.location.href = "?pageName=useraction.jsp";
         
     }
 });
 }
 
 </script>
-</body>
-</html>
+</div>

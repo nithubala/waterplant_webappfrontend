@@ -1,12 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<title>View Stock</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.min.js"></script>
+<div>
 <script type="text/javascript">
 
 function View()
@@ -27,8 +19,7 @@ function View()
    });
 }
 </script>
-</head>
-<body><jsp:include page="headers.jsp"></jsp:include>
+
 <div id="stock-section">
 <h3>Available Stock</h3>
        <table border="1" class="table table-condensed">
@@ -46,8 +37,6 @@ function View()
    <script>
 View();
 </script>
-<button onclick="location.href='adminaction.jsp';">Back</button>
+<button onclick="location.href='?pageName=adminaction.jsp';">Back</button>
 
-
-</body>
-</html>
+</div>

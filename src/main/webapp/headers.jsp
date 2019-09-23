@@ -6,16 +6,16 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="?pageName=home.jsp">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="userlogin.jsp">Login</a>
+          <a class="nav-link" href="?pageName=userlogin.jsp">Login</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="register.jsp">Register</a>
+          <a class="nav-link" href="?pageName=register.jsp">Register</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="viewstock.jsp">View Stock</a>
+          <a class="nav-link" href="?pageName=viewstock.jsp">View Stock</a>
         </li>
          
       </ul>

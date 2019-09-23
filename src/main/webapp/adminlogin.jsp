@@ -1,29 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.min.js"></script>
 
-<style type="text/css">
-label {
-	width: 110px;
-	display: inline-block;
-	text-align: center;
-}
-</style>
-</head>
-<body style="text-align: center">
-	<jsp:include page="headers.jsp"></jsp:include>
-	<br />
-	<%
-		String message = request.getParameter("message");
-		if (message != null) {
-			out.println("<font color='red'>" + message + "</font>");
-		}
-	%>
+<div>
 	<form onsubmit="register()">
 		<h3>AdminLogin</h3>
 		<br /> <label>Email:</label> <input type="email" name="email"
@@ -32,7 +8,7 @@ label {
 			id="password" size=25 placeholder="Enter the password" required /> <br>
 		<br /> <input type="submit" value="Login" class="btn btn-success">
 		<button type="reset" class="btn btn-danger" value="clear">Clear</button>
-		<br /> <a href="index.jsp"><u>Home?</u></a>
+		<br /> <a href="?pageName=home.jsp"><u>Home?</u></a>
 	</form>
 	<script>
 		function register() {
@@ -56,13 +32,14 @@ label {
 
 				if (msg.errorMessage != null) {
 					alert("Invalid Email/Password");
+					window.location.href = "?pageName=adminlogin.jsp";
+					
 				} else {
 					alert("Loggedin Successfully");
-					window.location.href = "adminaction.jsp";
+					window.location.href = "?pageName=adminaction.jsp";
 
 				}
 			});
 		}
 	</script>
-</body>
-</html>
+</div>
